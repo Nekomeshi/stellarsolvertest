@@ -121,7 +121,7 @@ void StellarSolverCtrl::setupStellarSolverParameters()
 {
     //Index Folder Paths
     QStringList indexFolderPaths;
-    indexFolderPaths << "/usr/share/astrometry/";
+    indexFolderPaths << mIndexPath;
     m_pStellarSolver->setIndexFolderPaths(indexFolderPaths);
 
     //These setup Logging if desired

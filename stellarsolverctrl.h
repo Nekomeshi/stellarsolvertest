@@ -46,6 +46,7 @@ public:
     bool isSolvingActive(){
         return m_pStellarSolver != nullptr && !m_pStellarSolver->solvingDone();
     }
+    void setIndexPath(QString path){mIndexPath = path;}
 signals:
     void onLogOutput(QString text);
     bool onSolverComplete(bool isSuccess, FITSImage::Solution solution);
@@ -69,6 +70,7 @@ private:
     float mSearchPositionRa;
     float mSearchPositionDec;
     bool mIsSearchPositionEnabled{false};
+    QString mIndexPath{"/usr/share/astrometry/"};
 
     QList<SSolver::Parameters> m_OptionsList;
     QList<SSolver::Parameters::ParametersProfile> m_OptionsProfileList;

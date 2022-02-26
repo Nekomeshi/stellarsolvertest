@@ -48,6 +48,7 @@ void MainWindow::on_pushButtonSolve_clicked()
     connect(&mStellarSolver, &StellarSolverCtrl::onSolverComplete, this, &MainWindow::solverComplete);
 
     mStellarSolver.setImage(mImg);
+    mStellarSolver.setIndexPath("/usr/share/astrometry/");
     mStellarSolver.setParameterProfile(SSolver::Parameters::ParametersProfile::PARALLEL_LARGESCALE);
     mStellarSolver.setScale(true, 20, 40);
     mStellarSolver.setSearchPosition(true, 65, 0);
